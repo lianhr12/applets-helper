@@ -3,7 +3,7 @@
 ## 一、前置依赖&要求
 ### 1.1 安装applets
 ```shell
-npm install applets -g
+npm install applets-helper -g
 ```
 
 
@@ -31,7 +31,7 @@ npm install applets -g
 
 ### 1.3 企业微信
 在群聊右击，添加群机器人，随后给hook的url地址，把`key`值记录下来，具体示例：
-```json
+```javascript
 "wecom": {
 	// 是否启用企业微信通知，默认启用
 	"enable": true,
@@ -55,7 +55,7 @@ nodemailer.createTransport({
  
  除此之前还额外增加`recipient`（收件人）和`cc`（抄送）两个参数配置，具体示例：
 
-``` json
+``` javascript
 "email": {
 	// 是否启用邮件，默认启动
 	"enable": true,
