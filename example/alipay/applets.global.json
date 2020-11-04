@@ -1,0 +1,17 @@
+{
+    "wecom"   : {
+      "enable": true,
+    	"key" : "填写企业微信hook的key"
+    },
+    "email"   : {
+      "enable": true,
+    	"service":"163", 
+    	"secureConnection": true,
+	    "auth": {
+	        "user": "邮箱地址",
+	        "pass": "163邮箱开启POP3/SMTP/IMAP配置时，填重新生成的授权密码"
+	    },
+        "recipient": ["xxx@gmail.com"],
+        "cc": ["xxx@163.com"]
+    }
+}

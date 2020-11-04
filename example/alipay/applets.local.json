@@ -1,0 +1,7 @@
+{
+	"name": "applets test",
+	"version": "1.1.2",
+	"toolId": "工具id",
+	"appId" : "应用id",
+	"privateKey": "私钥内容"	
+}
