@@ -1,0 +1,32 @@
+{
+    "applications": {
+        "alipay": {
+            "name" : "",
+            "version": "",
+            "appId": "",
+            "toolId": "",
+            "privateKey": ""
+        },
+        "wechat": {
+            "name" : "",
+            "version": "",
+            "appId": "",
+            "privateKeyPath": ""
+        }
+    },
+    "wecom": {
+        "enable": true,
+        "key": ""
+    },
+    "email": {
+        "enable": true,
+        "service": "163",
+        "secureConnection": true,
+        "auth": {
+            "user": "",
+            "pass": ""
+        },
+        "recipient": [],
+        "cc": []
+    }
+}

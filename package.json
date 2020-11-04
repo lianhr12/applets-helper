@@ -1,0 +1,37 @@
+{
+  "name": "applets-cli",
+  "version": "1.0.0",
+  "description": "Support the mainstream small programs on the market to break away from IDE tools, based on the official cli tool, do secondary packaging, submit quick submission & notification and other functions",
+  "main": "./bin/applets.js",
+  "bin": {
+    "applets": "./bin/applets.js"
+  },
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lianhr12/applets-cli.git"
+  },
+  "keywords": [
+    "alipay-app",
+    "weixin-app",
+    "cli"
+  ],
+  "author": "rope (lhr9311@gmail.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lianhr12/applets-cli/issues"
+  },
+  "homepage": "https://github.com/lianhr12/applets-cli#readme",
+  "devDependencies": {
+    "alipay-dev": "0.4.22",
+    "art-template": "4.13.2",
+    "commander": "6.2.0",
+    "execa": "4.1.0",
+    "fs-extra": "7.0.1",
+    "gitlog": "4.0.3",
+    "lodash": "4.17.20",
+    "miniprogram-ci": "1.0.83",
+    "nodemailer": "6.4.14",
+    "request-promise-native": "1.0.9"
+  }
+}
