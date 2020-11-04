@@ -83,7 +83,7 @@ applets --config applets.global.json
 查看全局配置信息
 
 ```shell
-allets --config list
+applets --config list
 
 # 输出信息：
 { applications:
@@ -202,3 +202,51 @@ applets --wechat upload
 
 ## 注意事项
 由于通知的内容会获取小程序目录git仓库的最新提交hash版本，以及最近3条提交记录作为通知摘要，为了防止报错，执行前请确保项目文件夹有git仓库记录。
+
+## 支付小程序发布示例（github仓库/example/alipay目录）
+
+applets.global.json 只有首次配置通知模块信息需要使用，或者后续修改时使用，假设我们已经获取到邮件和企业微信等通知配置的相关信息。
+
+在根目录下打开命令行执行：
+
+```shell
+applets --config applets.global.json
+```
+
+
+检查配置信息：
+
+```shell
+applets --config list
+```
+
+我们将applets.local.json文件的小程序依赖配置信息补充，主要信息上面有说明及获取。
+
+确认无误后，在根目录下打开命令行执行：
+
+
+
+1、发布预览版
+```
+applets --alipay preview
+```
+
+
+2、发布体验版
+```
+applets --alipay upload
+```
+
+![目录结构][1]
+
+
+如果跑完没有问题，不出意外可以看到相关的通知信息：
+
+![企业微信通知][2]
+
+ ![邮件通知][3]
+
+
+  [1]: https://cdn.nlark.com/yuque/0/2020/png/179989/1604486317473-43e84347-03ab-40be-b4a7-f5f93f40ca14.png
+  [2]: https://cdn.nlark.com/yuque/0/2020/png/179989/1604486771582-30769de0-37b3-4762-9770-36de51c10ca6.png
+  [3]: https://cdn.nlark.com/yuque/0/2020/png/179989/1604486728114-3f570321-393d-4a43-bb91-0689436764e6.png
