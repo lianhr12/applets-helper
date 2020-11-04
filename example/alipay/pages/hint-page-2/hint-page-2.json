@@ -1,0 +1,9 @@
+{
+  "defaultTitle": "让轮播组件动起来",
+  "titleBarColor": "#fefefe",
+  "pullRefresh": false,
+  "allowsBounceVertical": false,
+  "usingComponents": {
+    "next-button": "/components/next-button/next-button"
+  }
+}

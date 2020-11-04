@@ -1,0 +1,6 @@
+{
+    "titleBarColor": "#fefefe",
+    "usingComponents": {
+        "next-button": "/components/next-button/next-button"
+    }
+}

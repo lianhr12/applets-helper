@@ -1,0 +1,20 @@
+{
+  "pages": [
+    "pages/tasks/tasks",
+    "pages/cert-page/cert-page",
+    "pages/hint-page-1/hint-page-1",
+    "pages/hint-page-2/hint-page-2",
+    "pages/hint-page-3/hint-page-3"
+  ],
+  "plugins": {
+    "myPlugin": {
+      "version": "*",
+      "provider": "2019120769656826"
+    }
+  },
+  "window": {
+    "transparentTitle": "always",
+    "titlePenetrate": true,
+    "backgroundImageColor": "#3264C5"
+  }
+}

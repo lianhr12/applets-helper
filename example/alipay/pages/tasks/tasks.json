@@ -1,0 +1,6 @@
+{
+    "titleBarColor": "#fefefe",
+    "usingComponents": {
+        "status-icon": "/components/status-icon/status-icon"
+    }
+}

@@ -1,0 +1,29 @@
+<view class="page">
+  <view class="page-content">
+    <view class="header">
+      <image mode="scaleToFill" src="../../assets/images/hint.png"/>
+      <text>学习</text>
+    </view>
+    <view class="body">
+      <text class="body-title">Instructions</text>
+      <view class="item">
+        <text class="item-index">1. </text>
+        <view class="item-body">
+          点击顶部功能区的预览按钮，用手机扫码预览
+          <image mode="scaleToFill" src="../../assets/images/preview.png"/>
+        </view>
+      </view>
+      <view class="item">
+        <text class="item-index">2. </text>
+        <view class="item-body">
+          在手机端点击 Step4 领取开发体验证书
+          <image mode="scaleToFill" src="../../assets/images/step4btn.png"/>
+        </view>
+      </view>
+    </view>
+    <view class="footer {{isIDE ? 'isIDE' : ''}}">
+        <next-button enable="{{true}}" text="完成" onClick="complete"></next-button>
+    </view>
+  </view>
+
+</view>

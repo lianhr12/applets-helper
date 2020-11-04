@@ -1,0 +1,9 @@
+{
+  "defaultTitle": "在手机中预览效果",
+  "titleBarColor": "#fefefe",
+  "pullRefresh": false,
+  "allowsBounceVertical": false,
+  "usingComponents": {
+    "next-button": "/components/next-button/next-button"
+  }
+}

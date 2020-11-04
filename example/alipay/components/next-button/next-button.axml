@@ -1,0 +1,3 @@
+<button class="next-button {{enable ? 'enable' : 'disable'}}" hover-class="none" onTap="onClick">
+    {{text}}
+</button>

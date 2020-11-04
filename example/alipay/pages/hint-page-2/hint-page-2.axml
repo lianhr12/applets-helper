@@ -1,0 +1,47 @@
+<view class="page">
+  <view class="page-content">
+    <view class="header">
+      <image mode="scaleToFill" src="../../assets/images/hint.png"/>
+      <text>学习</text>
+    </view>
+    <view class="body">
+      <swiper
+        class="demo-swiper"
+        previousMargin="0"
+        nextMargin="0"
+        indicator-dots="{{indicatorDots}}"
+        autoplay="{{autoplay}}"
+        vertical="{{vertical}}"
+        interval="{{interval}}"
+        circular="{{circular}}"
+        onChange="onChangeHandler"
+      >
+        <block a:for="{{background}}">
+          <swiper-item key="swiper-item-{{index}}">
+            <view class="swiper-item bc_{{item}}"></view>
+          </swiper-item>
+        </block>
+      </swiper>
+      <view class="body-title">
+        <text>Instructions</text>
+      </view>
+      <view class="item">
+        <text class="item-index">1. </text>
+        <view class="item-body">
+          从左侧管理器中找到<text>`pages/hint-page-2/hint-page-2.js`</text>文件
+          <image mode="widthFix" src="../../assets/images/file-cut.png"/>
+        </view>
+      </view>
+      <view class="item">
+        <text class="item-index">2. </text>
+        <view class="item-body">
+          移除文件中的注释，并保存
+          <image id="code" mode="widthFix" src="../../assets/images/code-cut.png"/>
+        </view>
+      </view>
+    </view>
+    <view class="footer">
+      <next-button enable="{{isSet}}" onClick="next"></next-button>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,17 @@
+<view class="page">
+  <text class="title">恭喜你成为了一名真正的开发者！</text>
+  <text class="sub-title">快来领取证书吧～</text>
+  <view class="body">
+    <image mode="scaleToFill" src="../../assets/images/logo.png"/>
+    <text class="body-item body-title">阿里小程序开发体验证书</text>
+    <text class="body-item body-sub-title">Certificate of Alibaba mini program developer </text>
+    <view class="body-item spliter"></view>
+    <text class="body-item username">{{tasks[0].user.nickName}}</text>
+    <text class="body-item desc">恭喜你顺利完成所有任务并获得了开发体验证书，快来探索更多功能吧！</text>
+    <view class="body-item spliter"></view>
+    <text class="body-item date">{{tasks[3].date && tasks[3].date.slice(0, 10)}}</text>
+  </view>
+  <view class="footer">
+    <next-button enable="{{true}}" text="完成" onClick="complete"></next-button>
+  </view>
+</view>

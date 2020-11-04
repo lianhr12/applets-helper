@@ -1,0 +1,34 @@
+<view class="page">
+  <view class="page-content">
+    <view class="header">
+      <image mode="scaleToFill" src="../../assets/images/hint.png"/>
+      <text>学习</text>
+    </view>
+    <view class="body">
+      <text class="body-title">Instructions</text>
+      <view class="item">
+        <text class="item-index">1. </text>
+        <view class="item-body">
+          登录开发者工具
+          <image mode="scaleToFill" src="../../assets/images/login.png"/>
+        </view>
+      </view>
+      <view class="item">
+        <text class="item-index">2. </text>
+        <view class="item-body">
+          获取用户授权后，允许开发者获取头像、昵称、性别、所在地区等基础信息。此能力基于国际标准的Oauth2.0授权机制，在用户授权之后，得到用于换取用户信息的令牌。在拿到用户的授权令牌后，通过调用获取会员基础信息接口并获取相关信息。
+        </view>
+      </view>
+      <view class="user-info" a:if="{{user && user.nickName}}">
+        <image mode="scaleToFill" src="{{user && user.avatar || '../../assets/images/avatar.png'}}"/>
+        <view class="user-name">
+          {{user && user.nickName}}
+        </view>
+      </view>
+    </view>
+    <view class="footer">
+        <next-button enable="{{user}}" onClick="{{!!user ? 'taskAuth' : 'disabledAlert'}}"></next-button>
+    </view>
+  </view>
+  
+</view>

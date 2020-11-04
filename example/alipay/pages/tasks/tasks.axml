@@ -1,0 +1,31 @@
+<view class="page">
+
+<view class="main-header">
+  <text class="">完成以下步骤 \n 成为一名真正的开发者</text>
+</view>
+<view class="sub-header">
+    <text class="sub-text">预计学习时间8分钟</text>
+</view>
+  <view class="tasks">
+    <view a:for="{{tasks}}">
+      <view a:if="{{index == 0}}" class="desc">
+        <image mode="scaleToFill" src="../../assets/images/decorator.png"/>
+        <text>体验小程序代码能力</text>
+        <image mode="scaleToFill" style="transform: rotateY(180deg);" src="../../assets/images/decorator.png"/>
+      </view>
+      <view a:if="{{index == 2}}" class="desc">
+        <image mode="scaleToFill" src="../../assets/images/decorator.png"/>
+        <text>真机效果预览</text>
+        <image mode="scaleToFill" style="transform: rotateY(180deg);" src="../../assets/images/decorator.png"/>
+      </view>
+      <view class="task {{item.status}}" onTap="onTaskClicked" data-task-id="{{index}}">
+        <text class="task-idx">Step{{index + 1}}</text>
+        <view class="task-text">
+          {{item.text}}
+        </view>
+        <status-icon status="{{item.status}}"></status-icon>
+      </view>
+    </view>
+  </view>
+  <view class="footer"></view>
+</view>

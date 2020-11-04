@@ -1,0 +1,9 @@
+{
+  "defaultTitle": "登录并获取会员信息",
+  "titleBarColor": "#fefefe",
+  "pullRefresh": false,
+  "allowsBounceVertical": false,
+  "usingComponents": {
+    "next-button": "/components/next-button/next-button"
+  }
+}

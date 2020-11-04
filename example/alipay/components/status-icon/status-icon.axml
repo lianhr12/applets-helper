@@ -1,0 +1,3 @@
+<view class="status-icon {{status}}">
+  <image mode="scaleToFill" src="{{srcMap[status]}}"/>
+</view>

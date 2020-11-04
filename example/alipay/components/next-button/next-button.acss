@@ -1,0 +1,19 @@
+.next-button {
+  border-radius: 64px;
+  height: 50px;
+  width: 215px;
+  line-height: 50px;
+  text-align: center;
+  margin: 0 auto;
+  font-family: PingFangSC-Regular;
+  font-size: 18px;
+  color: #FFFFFF;
+  border: none;
+}
+.disable {
+  background: #84C8FD;
+}
+
+.enable {
+  background-image: linear-gradient(90deg, #1ABEFF 1%, #1B96F6 100%);
+}
