@@ -22,7 +22,7 @@
     "url": "https://github.com/lianhr12/applets-cli/issues"
   },
   "homepage": "https://github.com/lianhr12/applets-cli#readme",
-  "devDependencies": {
+  "dependencies": {
     "alipay-dev": "0.4.22",
     "art-template": "4.13.2",
     "commander": "6.2.0",
