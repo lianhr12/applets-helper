@@ -1,7 +1,7 @@
 {
   "name": "applets-helper",
-  "version": "1.0.0",
-  "description": "Support the mainstream small programs on the market to break away from IDE tools, based on the official cli tool, do secondary packaging, submit quick submission & notification and other functions",
+  "version": "1.0.2",
+  "description": "applets-helper 支持市场上主流的小程序，在脱离IDE工具的情况下，通过命令行工具可以快速发布预览和体验版本，同时集成了邮件和企业微信等通知方式，方便持续构建和快速部署（Jenkins/Gilab CI）和通知测试人员跟进测试。",
   "main": "./bin/applets.js",
   "bin": {
     "applets": "./bin/applets.js"
@@ -9,7 +9,7 @@
   "scripts": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lianhr12/applets-cli.git"
+    "url": "git+https://github.com/lianhr12/applets-helper.git"
   },
   "keywords": [
     "alipay-app",
@@ -19,9 +19,9 @@
   "author": "rope (lhr9311@gmail.com)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/lianhr12/applets-cli/issues"
+    "url": "https://github.com/lianhr12/applets-helper/issues"
   },
-  "homepage": "https://github.com/lianhr12/applets-cli#readme",
+  "homepage": "https://github.com/lianhr12/applets-helper#readme",
   "dependencies": {
     "alipay-dev": "0.4.22",
     "art-template": "4.13.2",

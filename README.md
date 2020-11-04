@@ -14,9 +14,11 @@ npm install applets-helper -g
 ```json
 {
     "wecom"   : {
+		"enable": true,
     	"key" : "xxxxx"
     },
     "email"   : {
+		"enable": true,
     	"service":"163", 
     	"secureConnection": true,
 	    "auth": {
@@ -33,7 +35,7 @@ npm install applets-helper -g
 在群聊右击，添加群机器人，随后给hook的url地址，把`key`值记录下来，具体示例：
 ```javascript
 "wecom": {
-	// 是否启用企业微信通知，默认启用
+	// 是否启用企业微信通知
 	"enable": true,
 	"key": "xxxxx"
 }
@@ -57,7 +59,7 @@ nodemailer.createTransport({
 
 ``` javascript
 "email": {
-	// 是否启用邮件，默认启动
+	// 是否启用邮件通知
 	"enable": true,
 	"service": "163",
 	"secureConnection": true,
@@ -78,6 +80,24 @@ nodemailer.createTransport({
 applets --config applets.global.json
 ```
 
+查看全局配置信息
+
+```shell
+allets --config list
+
+# 输出信息：
+{ applications:
+   { alipay: { name: '', version: '', appId: '', toolId: '', privateKey: '' },
+     wechat: { name: '', version: '', appId: '', privateKeyPath: '' } },
+  wecom: { enable: true, key: '' },
+  email:
+   { enable: true,
+     service: '163',
+     secureConnection: true,
+     auth: { user: '', pass: '' },
+     recipient: [],
+     cc: [] } }
+```
 
 
 ## 二、发布支付宝小程序
@@ -157,9 +177,12 @@ applets --alipay upload
 ```
 
 ### 3.4、如何获取体验版二维码
+这里需要说明一下，微信体验版是没有返回二维码图片的，但是以往的体验版二维码也不会过期，所以才需要手动下载一份二维码命名保存下来，方便后面通知使用。
+
 #### 3.4.1 API 方式获取
-操作过程步骤多，相对繁琐。
+操作过程步骤多，相对繁琐，不建议使用该方法。
 https://developers.weixin.qq.com/doc/oplatform/Third-party_Platforms/Mini_Programs/code/get_qrcode.html
+
 #### 3.4.2 管理后台下载
 小程序后台-管理-版本管理-开发版本-找到体验版二维码-下载
 保存到小程序项目根目录下的"temp/"，并命名"upload-wechat.jpg"
@@ -176,3 +199,6 @@ applets --wechat preview
 # 提交体验版本
 applets --wechat upload
 ```
+
+## 注意事项
+由于通知的内容会获取小程序目录git仓库的最新提交hash版本，以及最近3条提交记录作为通知摘要，为了防止报错，执行前请确保项目文件夹有git仓库记录。
