@@ -1,5 +1,5 @@
 {
-  "name": "applets-cli",
+  "name": "applets-helper",
   "version": "1.0.0",
   "description": "Support the mainstream small programs on the market to break away from IDE tools, based on the official cli tool, do secondary packaging, submit quick submission & notification and other functions",
   "main": "./bin/applets.js",
