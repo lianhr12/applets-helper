@@ -36,12 +36,12 @@ async function sendImgMsg(data = {}) {
                 }
             }
         });
-        console.log(res);
-        console.log(`发送预览二维码成功`);
-
+        if (res.errcode === 0) {
+            console.log(`发送企业微信二维码图片成功`);
+        }
         result = res;
     }catch(e) {
-        console.error(`发送预览二维码失败，原因${e}`);
+        console.error(`发送企业微信二维码图片失败，原因${e}`);
     }
     return result;
 }
@@ -54,6 +54,7 @@ async function sendMarkdownMsg(data = {}) {
 
     const {name, devName, version, gitHash, platform} = data;
     try {
+        
         let _gitCommit = '';
         if (Array.isArray(data.gitCommit)) {
             data.gitCommit.forEach((gItem) => {
@@ -74,10 +75,11 @@ async function sendMarkdownMsg(data = {}) {
                 }
             }
         });
-        console.log(res);
-        console.log(`发送应用信息成功`);
+        if (res.errcode === 0) {
+            console.log(`发送企业微信成功`);
+        }
     }catch(e) {
-        console.error(`发送应用信息失败，原因${e}`);
+        console.error(`发送企业微信失败，原因${e}`);
     }
 }
 
