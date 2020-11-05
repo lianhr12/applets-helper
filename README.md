@@ -1,4 +1,6 @@
-> applets-helper 支持市场上主流的小程序，在脱离IDE工具的情况下，通过命令行工具可以快速发布预览和体验版本，同时集成了邮件和企业微信等通知方式，方便持续构建和快速部署（Jenkins/Gilab CI）和通知测试人员跟进测试。
+# [applets-helper](https://github.com/lianhr12/applets-helper)
+
+> applets-helper 支持市场上主流的小程序，在脱离IDE工具的情况下，通过命令行工具可以快速发布预览和体验版本，同时集成了邮件和企业微信、钉钉等通知方式，方便持续构建和快速部署（Jenkins/Gilab CI）和通知测试人员跟进测试。
 
 ## 一、前置依赖&要求
 ### 1.1 安装applets
@@ -13,6 +15,10 @@ npm install applets-helper -g
 
 ```json
 {
+	"dingtalk": {
+    	"enable": true,
+    	"access_token": ""
+    },
     "wecom"   : {
 		"enable": true,
     	"key" : "xxxxx"
@@ -30,6 +36,17 @@ npm install applets-helper -g
     }
 }
 ```
+
+### 1.3 钉钉通知
+创建自定义群机器人，安全设置勾选自定义关键词`小程序`,记录下`access_token`值。
+```javascript
+"dingtalk": {
+	// 是否启用钉钉通知
+	"enable": true,
+	"access_token": ""
+}
+```
+这里有个小彩蛋，如果小程序二维码图片太大，可能会导致通知发送失败（平台对消息内容大小限制），微信预览提交返回的二维码图片就很大，所以导致失败。暂时不考虑增加图片压缩包来处理，这样会使包体积过大。
 
 ### 1.3 企业微信
 在群聊右击，添加群机器人，随后给hook的url地址，把`key`值记录下来，具体示例：
@@ -89,6 +106,7 @@ applets --config list
 { applications:
    { alipay: { name: '', version: '', appId: '', toolId: '', privateKey: '' },
      wechat: { name: '', version: '', appId: '', privateKeyPath: '' } },
+  dingtalk: { enable: true, access_token: '' },
   wecom: { enable: true, key: '' },
   email:
    { enable: true,
@@ -185,7 +203,7 @@ https://developers.weixin.qq.com/doc/oplatform/Third-party_Platforms/Mini_Progra
 
 #### 3.4.2 管理后台下载
 小程序后台-管理-版本管理-开发版本-找到体验版二维码-下载
-保存到小程序项目根目录下的"temp/"，并命名"upload-wechat.jpg"
+保存到小程序项目根目录下的`"./temp"`，并命名`"upload-wechat.jpg"`
 
 ### 3.5、命令参数
 
@@ -203,7 +221,7 @@ applets --wechat upload
 ## 注意事项
 由于通知的内容会获取小程序目录git仓库的最新提交hash版本，以及最近3条提交记录作为通知摘要，为了防止报错，执行前请确保项目文件夹有git仓库记录。
 
-## 支付小程序发布示例（github仓库/example/alipay目录）
+## 支付宝小程序发布示例（github仓库/example/alipay目录）
 
 applets.global.json 只有首次配置通知模块信息需要使用，或者后续修改时使用，假设我们已经获取到邮件和企业微信等通知配置的相关信息。
 
