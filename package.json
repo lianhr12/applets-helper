@@ -1,6 +1,6 @@
 {
   "name": "applets-helper",
-  "version": "1.0.2",
+  "version": "1.0.5",
   "description": "applets-helper 支持市场上主流的小程序，在脱离IDE工具的情况下，通过命令行工具可以快速发布预览和体验版本，同时集成了邮件和企业微信等通知方式，方便持续构建和快速部署（Jenkins/Gilab CI）和通知测试人员跟进测试。",
   "main": "./bin/applets.js",
   "bin": {
